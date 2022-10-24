@@ -1,0 +1,143 @@
+//=============/=============/=============
+/*
+burger: z-index: ;
+header: z-index: ;
+*/
+
+//=============/=============/=============
+._site-container {
+	min-height: 100vh;
+	@include flex-column;
+	overflow: hidden;
+}
+
+//=============/=============/=============
+._container {
+	width: 100%;
+	max-width: #{$maxWidthContainer + px};
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+//=============/=============/=============
+._visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+//=============/=============/=============
+._img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+//=============/=============/=============
+._btn-reset {
+	border: none;
+	padding: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+//=============/=============/=============
+._list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+//=============/=============/=============
+._input-reset {
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	outline: none;
+	border-radius: 0;
+	background-color: #fff;
+
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		display: none;
+	}
+}
+
+//=============/=============/=============
+._section {
+	padding-top: $offsetMaximum;
+	padding-bottom: $offsetMaximum;
+
+	@include max-width-tablet {
+		padding-top: $offsetHuge;
+		padding-bottom: $offsetHuge;
+	}
+
+	@include max-width-mobile {
+		padding-top: $offsetLarge;
+		padding-bottom: $offsetLarge;
+	}
+}
+
+//=============/=============/=============
+._main-btn {
+	@include flex-all-center;
+	padding: $offsetMinimum $offsetSmall;
+	min-height: 48px;
+	transition: all 0.3s linear;
+
+	&__dark {
+		color: $lightTextColor;
+		background-color: $darkColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $darkColor;
+				background-color: $creamCanColor;
+			}
+		}
+	}
+
+	&__light {
+		background-color: $lightColor;
+		border: 1px solid $lightColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $darkColor;
+				border-color: $creamCanColor;
+				background-color:$creamCanColor ;
+			}
+		}
+	}
+}
+
+//=============/=============/=============
+//- стили для scrollbar
+//- по умолчанию для всего сайта
+//- для определенного блока нужно подставить класс этого блока
+// &::-webkit-scrollbar {
+// 	width: 5px;
+// }
+
+// &::-webkit-scrollbar-track {
+// 	background: #ссс;
+// 	border-radius: 6px;
+// }
+
+// &::-webkit-scrollbar-thumb {
+// 	background: #000;
+// 	border-radius: 6px;
+// }

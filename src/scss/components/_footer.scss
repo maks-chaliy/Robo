@@ -1,0 +1,13 @@
+//=============/=============/=============
+.footer {
+	margin-top: auto;
+	height: 20px;
+
+	&__inner {
+		//отступ для якорей, чтобы header не перекрывал контент
+		// margin-top: var(--offset-maximum);
+		text-align: center;
+		height: 100%;
+		background-color: var(--pumpkin-color);
+	}
+}

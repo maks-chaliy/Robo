@@ -1,0 +1,27 @@
+//=============/=============/=============
+//========== SETTINGS ==========
+@import 'settings/fonts';
+@import 'settings/vars';
+@import 'settings/mixins';
+@import 'settings/normalize';
+@import 'settings/global';
+@import 'settings/common';
+
+
+//перед началом работы удалить этот код
+body {
+	background-image: url('@img/cover.jpg');
+	@include bg-cover;
+}
+
+
+//=============/=============/=============
+//========== COMPONENTS ==========
+@import 'components/header';
+
+@import 'components/footer';
+
+
+//=============/=============/=============
+//========== FILES ==========
+// @import 'files/burger';

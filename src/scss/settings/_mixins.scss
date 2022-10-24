@@ -1,0 +1,199 @@
+@mixin hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@mixin hide-transition {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.4s, visibility 0.4s linear;
+}
+
+@mixin show {
+	opacity: 1;
+	visibility: visible;
+}
+
+@mixin bg-cover {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+//=============/flex /=============
+
+@mixin flex {
+	display: flex;
+}
+
+@mixin inline-flex {
+	display: inline-flex;
+}
+
+@mixin flex-h-center {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-v-center {
+	display: flex;
+	justify-content: center;
+}
+
+@mixin flex-all-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-center-sb {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flex-start-sb {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+@mixin flex-end-sb {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-column-start {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+@mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@mixin flex-column-center-sb {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flex-column-all-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+//=============/ ADAPTIVE VALUES /=============
+
+@mixin large-screen {
+	@media (max-width: (1640px)) {
+		@content;
+	}
+}
+
+@mixin laptop-max {
+	@media (max-width: (1440px)) {
+		@content;
+	}
+}
+
+@mixin min-width-laptop-max {
+	@media (min-width: (1440px)) {
+		@content;
+	}
+}
+
+@mixin max-width-laptop {
+	@media (max-width: (1200px)) {
+		@content;
+	}
+}
+
+@mixin min-width-laptop {
+	@media (min-width: (1200px)) {
+		@content;
+	}
+}
+
+@mixin max-width-tablet-max {
+	@media (max-width: (992px)) {
+		@content;
+	}
+}
+
+@mixin min-width-tablet-max {
+	@media (min-width: (992px)) {
+		@content;
+	}
+}
+
+@mixin max-width-tablet {
+	@media (max-width: (768px)) {
+		@content;
+	}
+}
+
+@mixin min-width-tablet {
+	@media (min-width: (768px)) {
+		@content;
+	}
+}
+
+@mixin max-width-mobile {
+	@media (max-width: (576px)) {
+		@content;
+	}
+}
+
+@mixin min-width-mobile {
+	@media (min-width: (576px)) {
+		@content;
+	}
+}
+
+@mixin max-width-mobile-min {
+	@media (max-width: (425px)) {
+		@content;
+	}
+}
+
+@mixin min-width-mobile-min {
+	@media (min-width: (425px)) {
+		@content;
+	}
+}
+
+//=============/ ADAPTIVE VALUES /=============
+
+@mixin adaptivValue($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	@if $type == 1 {
+		//Только если меньше контейнера
+		#{$property}: $startSize + px;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $type == 2 {
+		//Только если больше контейнера
+		#{$property}: $startSize + px;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//Всегда
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
