@@ -8,16 +8,10 @@
 @import 'settings/common';
 
 
-//перед началом работы удалить этот код
-body {
-	background-image: url('@img/cover.jpg');
-	@include bg-cover;
-}
-
-
 //=============/=============/=============
 //========== COMPONENTS ==========
 @import 'components/header';
+@import 'components/hero';
 
 @import 'components/footer';
 

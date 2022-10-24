@@ -1,0 +1,38 @@
+//=============/ HERO /=============
+.hero {
+	height: 100vh;
+	max-height: 1080px;
+	background-color: #141024;
+
+	&__content {
+		padding-top: 200px;
+		@include flex-column;
+		color: $whiteTextColor;
+		max-width: 520px;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 70px;
+		line-height: 160%;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		width: 450px;
+		margin-bottom: 50px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 160%;
+	}
+
+	&__link {
+		background-color: #d52027;
+		border-radius: 5px;
+		max-width: 288px;
+		height: 79px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 160%;
+	}
+}
