@@ -1,4 +1,4 @@
-//=============/=============/=============
+
 //========== SETTINGS ==========
 @import 'settings/fonts';
 @import 'settings/vars';
@@ -8,16 +8,16 @@
 @import 'settings/common';
 
 
-//=============/=============/=============
 //========== COMPONENTS ==========
 @import 'components/header';
 @import 'components/hero';
 @import 'components/about';
 @import 'components/benefits';
+@import 'components/trainers';
 
 @import 'components/footer';
 
 
-//=============/=============/=============
-//========== FILES ==========
+//========== READY_CODES ==========
 // @import 'files/burger';
+@import 'ready_codes/modals';

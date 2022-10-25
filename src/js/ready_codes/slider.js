@@ -1,5 +1,28 @@
+const $trainersSlider = document.querySelector('.trainers__slider');
+
+let trainersSlider = new Swiper($trainersSlider, {
+
+	slidesPerView: 4,
+	spaceBetween: 40,
+	// breakpoints: {
+	// 	769: {
+	// 		slidesPerView: 4,
+	// 		spaceBetween: 40,
+	// 	}
+	// },
+	scrollbar: {
+		el: '.trainers__scroll',
+		dragable: true,
+	},
+		navigation: {
+		nextEl: '.trainers__slider-btn--next',
+		prevEl: '.trainers__slider-btn--prev',
+	},
+})
 
 
+
+/*
 // const $sliderMain = document.querySelector('.slider-main');
 
 // let sliderMain = new Swiper($sliderMain, {
@@ -17,7 +40,7 @@ if (document.querySelector('.slider-main')) {
 
 		//=============/=============/=============/=============/=============
 		//количество слайдов в одном блоке
-		slidesPerView: 1,
+		slidesPerView: 4,
 
 		//=============/=============/=============/=============/=============
 		//бесконечный цикл прокрутки по кругу
@@ -25,15 +48,15 @@ if (document.querySelector('.slider-main')) {
 
 		//=============/=============/=============/=============/=============
 		//отступ между слайдами
-		spaceBetween: 30,
+		spaceBetween: 40,
 
 		//=============/=============/=============/=============/=============
 		//скорость
-		speed: 1400,
+		// speed: 1400,
 
 		//=============/=============/=============/=============/=============
 		//эффект паралакса
-		parallax: true,
+		// parallax: true,
 
 		//=============/=============/=============/=============/=============
 		//сменяет слайды группой
@@ -48,20 +71,20 @@ if (document.querySelector('.slider-main')) {
 
 		//=============/=============/=============/=============/=============
 		//dotts
-		pagination: {
-			el: '.slider-main__dotts',
-			type: 'bullets',
-			//если нужны цифры нужен другой тип пагинации
-			//type: 'fraction',
-			//чтобы точки были кликабельны
-			clickable: true,
-		},
+		// pagination: {
+		// 	el: '.slider-main__dotts',
+		// 	type: 'bullets',
+		// 	//если нужны цифры нужен другой тип пагинации
+		// 	//type: 'fraction',
+		// 	//чтобы точки были кликабельны
+		// 	clickable: true,
+		// },
 
 		//=============/=============/=============/=============/=============
 		//автоматическое переключение слайдера каждые 2 сек
-		autoplay: {
-			delay: 4000,
-		},
+		// autoplay: {
+		// 	delay: 4000,
+		// },
 
 		//=============/=============/=============/=============/=============
 		// breakpoints: {
@@ -80,3 +103,4 @@ if (document.querySelector('.slider-main')) {
 		// },
 	});
 }
+*/

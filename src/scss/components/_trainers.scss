@@ -1,0 +1,32 @@
+//=============/ TRAINERS /=============
+.trainers {
+	&__item {
+		@include flex-column;
+	}
+
+	&__image {
+		margin-bottom: 20px;
+
+		img {
+			max-height: 500px;
+			border-radius: 20px;
+		}
+	}
+	&__name {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 160%;
+		margin-bottom: 10px;
+	}
+
+	&__prof {
+		line-height: 160%;
+		color: rgba(20, 16, 36, 0.7);
+		margin-bottom: 20px;
+	}
+
+	&__link {
+		color: $accentColor;
+		line-height: 160%;
+	}
+}

@@ -1,7 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $mainFontFamily;
+	font-weight: $mainFontWeight;
+	font-size: $mainFontSize;
+	background-color: $whiteColor;
+	color: $darkTextColor;
+}
+
+html {
+	//для плавной прокрутки scrollTop
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	font-weight: $mainFontWeight;
+}
+
+span {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+//убрать крестик в поле ввода input
+// input[type="search"]::-webkit-search-decoration,
+// input[type="search"]::-webkit-search-cancel-button,
+// input[type="search"]::-webkit-search-results-button,
+// input[type="search"]::-webkit-search-results-decoration {
+// 	display: none;
+// }
+
+/* убираем стандартные стрелочки Chrome */
+// input[type="number"]::-webkit-outer-spin-button,
+// input[type="number"]::-webkit-inner-spin-button {
+// 	-webkit-appearance: none;
+// 	margin: 0;
+// }
+
+// /* убираем стандартную стрелку указатель Chrome */
+// summary::-webkit-details-marker {
+//     display: none;
+// }
+
+// /* убираем стандартные стрелочки Chrome */
+// input[type="number"]::-webkit-outer-spin-button,
+// input[type="number"]::-webkit-inner-spin-button {
+//     -webkit-appearance: none;
+//     margin: 0;
+// }
+
+// /* убираем стандартные стрелочки Firefoх */
+// input[type="number"] {
+//     -moz-appearance: textfield;
+// }
+
+// input[type="number"]:hover,
+// input[type="number"]:focus {
+//     -moz-appearance: number-input;
+// }
+
+//=======================================
+
+
+
 //=============/=============/=============
 /*
 burger: z-index: ;
 header: z-index: 100;
+modals: z-index: 101;
 */
 
 //=============/=============/=============
@@ -140,6 +244,12 @@ header: z-index: 100;
 	background: rgba(20, 16, 36, 0.08);
 	cursor: pointer;
 
+	// &:focus {
+	// 	._tooltip__text {
+	// 		@include show;
+	// 	}
+	// }
+
 	@include hover {
 		._tooltip__text {
 			@include show;
@@ -167,6 +277,11 @@ header: z-index: 100;
 		border-radius: 5px;
 		@include hide-transition;
 	}
+}
+
+//=============/=============/=============
+._content-from-container {
+	padding-left: max(15px, calc((100% - $contentWidth) / 2));
 }
 
 //=============/=============/=============

@@ -1,6 +1,7 @@
 const CLASS_LIST = {
 	MODAL: 'modal',
 	MODAL_ACTIVE: 'modal--active',
+	MODAL_HAS_SCROLL: 'modal--has-scroll',
 	MODAL_OPEN: 'modal-btn--open',
 	MODAL_CLOSE: 'modal-btn--close'
 };

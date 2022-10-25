@@ -23,12 +23,12 @@
 	<div class="_site-container">
 		<header class="header">
 	<div class="_container__wide header__container">
-		<a href="#" class="header__logo logo">Robo.Sholl</a>
+		<a href="#" class="header__logo logo">Robo.Scholl</a>
 		<nav class="header__nav nav" title="Главное меню" data-nav>
 			<ul class="_list-reset nav__list">
-				<li class="nav__item"><a href="#about" class="nav__link" data-scrollsection=".about">О школе</a></li>
-				<li class="nav__item"><a href="#trainers" class="nav__link" data-scrollsection=".trainers">Тренеры</a></li>
-				<li class="nav__item"><a href="#tariffs" class="nav__link" data-scrollsection=".tariffs">Стоимость</a></li>
+				<li class="nav__item"><a href="#about" class="nav__link" data-scroll_by_click=".about">О школе</a></li>
+				<li class="nav__item"><a href="#trainers" class="nav__link" data-scroll_by_click=".trainers">Тренеры</a></li>
+				<li class="nav__item"><a href="#tariffs" class="nav__link" data-scroll_by_click=".tariffs">Стоимость</a></li>
 			</ul>
 		</nav>
 		<a href="tel:+78000001122" class="header__phone">+7 800 000 11 22</a>
@@ -99,6 +99,91 @@
 		</ul>
 	</div>
 </section>
+			<section class="_section trainers" id="trainers">
+	<div class="_container trainers__container">
+		<h2 class="_section-title">Профессиональные тренеры</h2>
+	</div>
+	<div class="_content-from-container">
+		<div class="swiper trainers__slider">
+			<button class="btn-reset slider__btn slider-main__btn-prev"></button>
+			<button class="btn-reset slider__btn slider-main__btn-next"></button>
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide">
+					<div class="trainers__item">
+						<picture class="trainers__image">
+							<source srcset="img/trainers/trainer-1.webp" type="image/webp">
+							<img loading="lazy" src="img/trainers/trainer-1.jpg" class="image" width="390" height="500"
+								alt="Ирина Лайм">
+						</picture>
+						<span class="trainers__name">Ирина Лайм</span>
+						<span class="trainers__prof">преподаватель по робототехнике</span>
+						<a href="#modal-1" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
+
+					</div>
+				</div>
+
+				<div class="slider-main__slide swiper-slide">
+					<div class="trainers__item">
+						<picture class="trainers__image">
+							<source srcset="img/trainers/trainer-2.webp" type="image/webp">
+							<img loading="lazy" src="img/trainers/trainer-2.jpg" class="image" width="390" height="500"
+								alt="Ирина Лайм">
+						</picture>
+						<span class="trainers__name">Марина Орлова</span>
+						<span class="trainers__prof">преподаватель по робототехнике</span>
+						<a href="#modal-2" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
+					</div>
+				</div>
+
+				<div class="slider-main__slide swiper-slide">
+					<div class="trainers__item">
+						<picture class="trainers__image">
+							<source srcset="img/trainers/trainer-3.webp" type="image/webp">
+							<img loading="lazy" src="img/trainers/trainer-3.jpg" class="image" width="390" height="500"
+								alt="Ирина Лайм">
+						</picture>
+						<span class="trainers__name">Максим Петров</span>
+						<span class="trainers__prof">преподаватель по программированию</span>
+						<a href="#modal-3" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
+					</div>
+				</div>
+
+				<div class="slider-main__slide swiper-slide">
+					<div class="trainers__item">
+						<picture class="trainers__image">
+							<source srcset="img/trainers/trainer-4.webp" type="image/webp">
+							<img loading="lazy" src="img/trainers/trainer-4.jpg" class="image" width="390" height="500"
+								alt="Ирина Лайм">
+						</picture>
+						<span class="trainers__name">Константин Назаров</span>
+						<span class="trainers__prof">преподаватель по робототехнике</span>
+						<a href="#modal-4" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
+					</div>
+				</div>
+
+				<div class="slider-main__slide swiper-slide">
+					<div class="trainers__item">
+						<picture class="trainers__image">
+							<source srcset="img/trainers/trainer-5.webp" type="image/webp">
+							<img loading="lazy" src="img/trainers/trainer-5.jpg" class="image" width="390" height="500"
+								alt="Ирина Лайм">
+						</picture>
+						<span class="trainers__name">Лиза Весенняя</span>
+						<span class="trainers__prof">преподаватель по программированию</span>
+						<a href="#modal-5" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+
+
 		</main>
 		<footer class="footer">
 	<div class="footer__inner">
@@ -106,6 +191,90 @@
 	</div>
 </footer>
 	</div>
+	<div class="modal" id="modal-1">
+	<div class="modal__content">
+		<div class="modal__header">
+			<picture>
+				<source srcset="img/trainers/trainer-1.webp" type="image/webp">
+				<img loading="lazy" src="img/trainers/trainer-1.jpg" class="image" width="160" height="222" alt="Ирина Лайм">
+			</picture>
+			<button class="_btn-reset modal-btn--close"
+				aria-label="Закрыть модальное окно"><span>Закрыть</span></button>
+		</div>
+		<div class="modal__body"></div>
+		<div class="modal__footer">
+			<button class="_btn-reset modal-btn--close" aria-label="Закрыть модальное окно">Закрыть</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-2">
+	<div class="modal__content">
+		<div class="modal__header">
+			<picture>
+				<source srcset="img/trainers/trainer-2.webp" type="image/webp">
+				<img loading="lazy" src="img/trainers/trainer-2.jpg" class="image" width="160" height="222" alt="Ирина Лайм">
+			</picture>
+			<button class="_btn-reset modal-btn--close"
+				aria-label="Закрыть модальное окно"><span>Закрыть</span></button>
+		</div>
+		<div class="modal__body"></div>
+		<div class="modal__footer">
+			<button class="_btn-reset modal-btn--close" aria-label="Закрыть модальное окно">Закрыть</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-3">
+	<div class="modal__content">
+		<div class="modal__header">
+			<picture>
+				<source srcset="img/trainers/trainer-3.webp" type="image/webp">
+				<img loading="lazy" src="img/trainers/trainer-3.jpg" class="image" width="160" height="222" alt="Ирина Лайм">
+			</picture>
+			<button class="_btn-reset modal-btn--close"
+				aria-label="Закрыть модальное окно"><span>Закрыть</span></button>
+		</div>
+		<div class="modal__body"></div>
+		<div class="modal__footer">
+			<button class="_btn-reset modal-btn--close" aria-label="Закрыть модальное окно">Закрыть</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-4">
+	<div class="modal__content">
+		<div class="modal__header">
+			<picture>
+				<source srcset="img/trainers/trainer-4.webp" type="image/webp">
+				<img loading="lazy" src="img/trainers/trainer-4.jpg" class="image" width="160" height="222" alt="Ирина Лайм">
+			</picture>
+			<button class="_btn-reset modal-btn--close"
+				aria-label="Закрыть модальное окно"><span>Закрыть</span></button>
+		</div>
+		<div class="modal__body"></div>
+		<div class="modal__footer">
+			<button class="_btn-reset modal-btn--close" aria-label="Закрыть модальное окно">Закрыть</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal-5">
+	<div class="modal__content">
+		<div class="modal__header">
+			<picture>
+				<source srcset="img/trainers/trainer-5.webp" type="image/webp">
+				<img loading="lazy" src="img/trainers/trainer-5.jpg" class="image" width="160" height="222" alt="Ирина Лайм">
+			</picture>
+			<button class="_btn-reset modal-btn--close"
+				aria-label="Закрыть модальное окно"><span>Закрыть</span></button>
+		</div>
+		<div class="modal__body"></div>
+		<div class="modal__footer">
+			<button class="_btn-reset modal-btn--close" aria-label="Закрыть модальное окно">Закрыть</button>
+		</div>
+	</div>
+</div>
 
 	
 	<!-- ========== FONT AWESOME ========== -->

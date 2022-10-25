@@ -19,43 +19,6 @@
 		margin-bottom: 20px;
 	}
 
-	// &__tooltip {
-	// 	position: relative;
-	// 	width: 24px;
-	// 	height: 24px;
-	// 	border-radius: 100%;
-	// 	background: rgba(20, 16, 36, 0.08);
-	// 	cursor: pointer;
-
-	// 	@include hover {
-	// 		.benefits__tooltip-text {
-	// 			@include show;
-	// 		}
-	// 	}
-	// }
-
-	// &__tooltip-icon {
-	// 	width: 3px;
-	// 	height: 22px;
-	// 	position: absolute;
-	// 	left: 50%;
-	// 	top: 50%;
-	// 	transform: translate3d(-50%, -50%, 0);
-	// }
-
-	// &__tooltip-text {
-	// 	position: absolute;
-	// 	left: 30px;
-	// 	top: -60px;
-	// 	font-size: 16px;
-	// 	line-height: 160%;
-	// 	width: 292px;
-	// 	padding: 20px;
-	// 	background-color: $whiteColor;
-	// 	border-radius: 5px;
-	// 	@include hide-transition;
-	// }
-
 	&__descr {
 		line-height: 160%;
 		color: rgba(20, 16, 36, 0.7);
