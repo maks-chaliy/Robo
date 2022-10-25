@@ -1,7 +1,7 @@
 //=============/=============/=============
 /*
 burger: z-index: ;
-header: z-index: ;
+header: z-index: 100;
 */
 
 //=============/=============/=============
@@ -107,6 +107,65 @@ header: z-index: ;
 		&:hover {
 			background-color: rgba($accentColor, 0.6);
 		}
+	}
+}
+
+//=============/=============/=============
+._section-title {
+	color: inherit;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 160%;
+	margin-bottom: 60px;
+
+	@include max-width-tablet {
+		font-size: 40px;
+		line-height: 140%;
+		margin-bottom: 40px;
+	}
+
+	@include max-width-mobile {
+		font-size: 30px;
+		line-height: 120%;
+		margin-bottom: 30px;
+	}
+}
+
+//=============/=============/=============
+._tooltip {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	background: rgba(20, 16, 36, 0.08);
+	cursor: pointer;
+
+	@include hover {
+		._tooltip__text {
+			@include show;
+		}
+	}
+
+	&__icon {
+		width: 4px;
+		height: 18px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+
+	&__text {
+		position: absolute;
+		left: 30px;
+		top: -60px;
+		font-size: 16px;
+		line-height: 160%;
+		width: 292px;
+		padding: 20px;
+		background-color: $whiteColor;
+		border-radius: 5px;
+		@include hide-transition;
 	}
 }
 

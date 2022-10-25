@@ -4,6 +4,13 @@
 	max-height: 1080px;
 	background-color: #141024;
 
+	// &__container {
+	// 	height: 100%;
+	// 	background-image: url('../../img/hero_img.jpg');
+	// 	background-repeat: no-repeat;
+	// 	background-position: right bottom;
+	// }
+
 	&__content {
 		padding-top: 200px;
 		@include flex-column;

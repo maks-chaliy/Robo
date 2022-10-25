@@ -1,0 +1,19 @@
+
+
+
+
+{
+	"Tooltip": {
+		"scope": "html",
+		"prefix": "q-tooltip",
+		"body": [
+			"<span class=\"_tooltip\">",
+			"  <svg class=\"_tooltip__icon\">",
+			"    <use xlink:href=\"img/svg/sprite.svg#tooltip\"></use>",
+			"  </svg>",
+			"  <span class=\"tooltip__text\">Какой то текст тултипа</span>",
+			"</span>"
+		]
+	}
+}
+

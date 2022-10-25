@@ -16,32 +16,32 @@ flsFunctions.isWebp();
 
 
 
-// //прокрутка при клике
-// const $menuBody = document.querySelector('.nav');
-// const $menuLinks = document.querySelectorAll('.nav__link[data-goto]');
+//прокрутка при клике
+const $nav = document.querySelector('.nav');
+const $navLinks = document.querySelectorAll('.nav__link[data-scrollsection]');
 
-// if($menuLinks.length > 0) {
-// 	$menuLinks.forEach(menuLink =>{
-// 		menuLink.addEventListener('click', onMenuLinkClick);
-// 	})
+if($navLinks.length > 0) {
+	$navLinks.forEach(menuLink =>{
+		menuLink.addEventListener('click', onMenuLinkClick);
+	})
 
-// 	function onMenuLinkClick(e) {
-// 		const menuLink = e.target;
-// 		if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
-// 			const gotoBlock = document.querySelector(menuLink.dataset.goto)
-// 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+	function onMenuLinkClick(e) {
+		const navLink = e.target;
+		if(navLink.dataset.scrollsection && document.querySelector(navLink.dataset.scrollsection)){
+			const scrollsectionBlock = document.querySelector(navLink.dataset.scrollsection)
+			const scrollsectionBlockValue = scrollsectionBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-// 			if($menuIcon.classList.contains('_active')) {
-// 				document.body.classList.remove('_stop-scroll')
-// 				$menuIcon.classList.remove('_active');
-// 				$menuBody.classList.remove('_active');
-// 			}
+			// if($navIcon.classList.contains('_active')) {
+			// 	document.body.classList.remove('_stop-scroll')
+			// 	$menuIcon.classList.remove('_active');
+			// 	$nav.classList.remove('_active');
+			// }
 
-// 			window.scrollTo({
-// 				top:gotoBlockValue,
-// 				behavior: 'smooth'
-// 			});
-// 			e.preventDefault();
-// 		}
-// 	}
-// }
+			window.scrollTo({
+				top: scrollsectionBlockValue,
+				behavior: 'smooth'
+			});
+			e.preventDefault();
+		}
+	}
+}

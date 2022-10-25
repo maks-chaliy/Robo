@@ -1,0 +1,38 @@
+//=============/ ABOUT /=============
+.about {
+	background-color: $whiteColor;
+	
+	&__descr {
+		font-size: 30px;
+		line-height: 160%;
+		max-width: 892px;
+		margin-bottom: 60px;
+	}
+
+	&__descr-highlight {
+		font-weight: 600;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 40px;
+	}
+
+	&__item{
+		grid-column: 3 span;
+	}
+
+	&__digit {
+		font-weight: 600;
+		font-size: 70px;
+		line-height: 160%;
+		color: $accentColor;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 160%;
+		color: rgba(20, 16, 36, 0.7);
+	}
+}

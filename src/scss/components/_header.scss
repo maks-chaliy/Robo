@@ -1,11 +1,13 @@
 //=============/ HEADER /=============
 .header {
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	left: 0;
 	top: 0;
+	background-color: #141024;
 	width: 100%;
 	padding: 30px 0;
+	@include flex-h-center;
 	max-height: 70px;
 
 	&__container {
