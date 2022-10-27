@@ -25,7 +25,7 @@
 @mixin hover {
 	@media (any-hover: hover) {
 		&:hover {
-			@content
+			color: red;
 		}
 	}
 }
