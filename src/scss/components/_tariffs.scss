@@ -1,0 +1,72 @@
+//=============/ 	TARIFFS /=============
+.tariffs {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 40px;
+	}
+
+	&__item {
+		grid-column: 4 span;
+		padding: 40px;
+		background-color: $whiteColor;
+		border-radius: 20px;
+
+		border: 1px solid rgba(20, 16, 36, 0.2);
+		border-radius: 20px;
+		@include flex-column-center;
+
+		&--current {
+			background: #141024;
+			color: $whiteTextColor;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 160%;
+		margin-bottom: 83px;
+		@include flex-h-center;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 3px;
+			background-color: currentColor;
+			margin-right: 10px;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 3px;
+			background-color: currentColor;
+			margin-left: 10px;
+		}
+	}
+
+	&__price {
+		font-weight: 600;
+		font-size: 50px;
+		line-height: 160%;
+		margin-bottom: 20px;
+	}
+
+	&__descr {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 160%;
+		margin-bottom: auto;
+		text-align: center;
+	}
+
+	&__btn {
+		margin-top: 52px;
+		color: $whiteTextColor;
+		width: 100%;
+		padding: 25px 0;
+	}
+}

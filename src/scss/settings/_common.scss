@@ -60,47 +60,6 @@ textarea {
 	font-family: inherit;
 }
 
-//убрать крестик в поле ввода input
-// input[type="search"]::-webkit-search-decoration,
-// input[type="search"]::-webkit-search-cancel-button,
-// input[type="search"]::-webkit-search-results-button,
-// input[type="search"]::-webkit-search-results-decoration {
-// 	display: none;
-// }
-
-/* убираем стандартные стрелочки Chrome */
-// input[type="number"]::-webkit-outer-spin-button,
-// input[type="number"]::-webkit-inner-spin-button {
-// 	-webkit-appearance: none;
-// 	margin: 0;
-// }
-
-// /* убираем стандартную стрелку указатель Chrome */
-// summary::-webkit-details-marker {
-//     display: none;
-// }
-
-// /* убираем стандартные стрелочки Chrome */
-// input[type="number"]::-webkit-outer-spin-button,
-// input[type="number"]::-webkit-inner-spin-button {
-//     -webkit-appearance: none;
-//     margin: 0;
-// }
-
-// /* убираем стандартные стрелочки Firefoх */
-// input[type="number"] {
-//     -moz-appearance: textfield;
-// }
-
-// input[type="number"]:hover,
-// input[type="number"]:focus {
-//     -moz-appearance: number-input;
-// }
-
-//=======================================
-
-
-
 //=============/=============/=============
 /*
 burger: z-index: ;
@@ -128,6 +87,11 @@ modals: z-index: 101;
 		padding: 0 15px;
 		margin: 0 auto;
 	}
+}
+
+//=============/=============/=============
+._content-from-container {
+	padding-left: max(15px, calc((100% - $contentWidth) / 2));
 }
 
 //=============/=============/=============
@@ -238,17 +202,13 @@ modals: z-index: 101;
 //=============/=============/=============
 ._tooltip {
 	position: relative;
+	left: 5px;
+	top: -10px;
 	width: 24px;
 	height: 24px;
 	border-radius: 100%;
 	background: rgba(20, 16, 36, 0.08);
 	cursor: pointer;
-
-	// &:focus {
-	// 	._tooltip__text {
-	// 		@include show;
-	// 	}
-	// }
 
 	@include hover {
 		._tooltip__text {
@@ -277,11 +237,6 @@ modals: z-index: 101;
 		border-radius: 5px;
 		@include hide-transition;
 	}
-}
-
-//=============/=============/=============
-._content-from-container {
-	padding-left: max(15px, calc((100% - $contentWidth) / 2));
 }
 
 //=============/=============/=============

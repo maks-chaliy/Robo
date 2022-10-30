@@ -99,17 +99,15 @@
 		</ul>
 	</div>
 </section>
-			<section class="_section trainers" id="trainers">
+			<section class="_section trainers">
 	<div class="_container trainers__container">
 		<h2 class="_section-title">Профессиональные тренеры</h2>
 	</div>
-	<div class="_content-from-container">
-		<div class="swiper trainers__slider">
-			<button class="btn-reset slider__btn slider-main__btn-prev"></button>
-			<button class="btn-reset slider__btn slider-main__btn-next"></button>
-			<div class="swiper-wrapper">
 
-				<div class="swiper-slide">
+	<div class="_content-from-container">
+		<div class="slider">
+			<div class="slider__wrapper">
+				<div class="slider__slide">
 					<div class="trainers__item">
 						<picture class="trainers__image">
 							<source srcset="img/trainers/trainer-1.webp" type="image/webp">
@@ -119,11 +117,10 @@
 						<span class="trainers__name">Ирина Лайм</span>
 						<span class="trainers__prof">преподаватель по робототехнике</span>
 						<a href="#modal-1" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
-
 					</div>
 				</div>
 
-				<div class="slider-main__slide swiper-slide">
+				<div class="slider__slide">
 					<div class="trainers__item">
 						<picture class="trainers__image">
 							<source srcset="img/trainers/trainer-2.webp" type="image/webp">
@@ -136,7 +133,7 @@
 					</div>
 				</div>
 
-				<div class="slider-main__slide swiper-slide">
+				<div class="slider__slide">
 					<div class="trainers__item">
 						<picture class="trainers__image">
 							<source srcset="img/trainers/trainer-3.webp" type="image/webp">
@@ -144,15 +141,15 @@
 								alt="Ирина Лайм">
 						</picture>
 						<span class="trainers__name">Максим Петров</span>
-						<span class="trainers__prof">преподаватель по программированию</span>
+						<span class="trainers__prof">преподаватель по робототехнике</span>
 						<a href="#modal-3" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
 					</div>
 				</div>
 
-				<div class="slider-main__slide swiper-slide">
+				<div class="slider__slide">
 					<div class="trainers__item">
 						<picture class="trainers__image">
-							<source srcset="img/trainers/trainer-4.webp" type="image/webp">
+							<source srcset="img/trainers/trainer-4         .webp" type="image/webp">
 							<img loading="lazy" src="img/trainers/trainer-4.jpg" class="image" width="390" height="500"
 								alt="Ирина Лайм">
 						</picture>
@@ -162,7 +159,7 @@
 					</div>
 				</div>
 
-				<div class="slider-main__slide swiper-slide">
+				<div class="slider__slide">
 					<div class="trainers__item">
 						<picture class="trainers__image">
 							<source srcset="img/trainers/trainer-5.webp" type="image/webp">
@@ -170,7 +167,7 @@
 								alt="Ирина Лайм">
 						</picture>
 						<span class="trainers__name">Лиза Весенняя</span>
-						<span class="trainers__prof">преподаватель по программированию</span>
+						<span class="trainers__prof">преподаватель по робототехнике</span>
 						<a href="#modal-5" class="modal-btn--open trainers__link"><span>Подробнее</span></a>
 					</div>
 				</div>
@@ -179,11 +176,49 @@
 		</div>
 	</div>
 
+	<div class="_container">
+		<div class="slider__nav">
+			<div class="slider__scroll"></div>
+			<div class="slider__btns">
+				<button class="_btn-reset slider__btn slider__btn--prev" aria-label="Перейти к предыдущему слайду">
+					<i class='bx bx-chevron-left slider__btn--arrow'></i>
+				</button>
+				<button class="_btn-reset slider__btn slider__btn--next" aria-label="Перейти к следующему слайду">
+					<i class='bx bx-chevron-right slider__btn--arrow'></i>
+				</button>
+			</div>
+		</div>
+	</div>
 </section>
+			<section class="_section tariffs" id="tariffs">
+	<div class="_container tariffs__container">
+		<h2 class="_section-title">Выберите нужный пакет</h2>
+		<div class="tariffs__items">
 
+			<div class="tariffs__item tariffs__item--current">
+				<h3 class="tariffs__subtitle">PRO</h3>
+				<span class="tariffs__price">20.000 ₽</span>
+				<p class="tariffs__descr">УМК по робототетхнике и программированию</p>
+				<button class="_btn-reset _main-btn tariffs__btn">Оставить заявку</button>
+			</div>
 
+			<div class="tariffs__item">
+				<h3 class="tariffs__subtitle">ROBO</h3>
+				<span class="tariffs__price">15.000 ₽</span>
+				<p class="tariffs__descr">УМК по робототетхнике </p>
+				<button class="_btn-reset _main-btn tariffs__btn">Оставить заявку</button>
+			</div>
 
+			<div class="tariffs__item">
+				<h3 class="tariffs__subtitle">PROG</h3>
+				<span class="tariffs__price">10.000 ₽</span>
+				<p class="tariffs__descr">УМК по программированию</p>
+				<button class="_btn-reset _main-btn tariffs__btn">Оставить заявку</button>
+			</div>
 
+		</div>
+	</div>
+</section>
 		</main>
 		<footer class="footer">
 	<div class="footer__inner">
