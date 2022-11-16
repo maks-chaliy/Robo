@@ -1,21 +1,36 @@
 //=============/ HERO /=============
 .hero {
-	height: 100vh;
-	max-height: 1080px;
+	min-height: 800px;
 	background-color: #141024;
 
-	// &__container {
-	// 	height: 100%;
-	// 	background-image: url('../../img/hero_img.jpg');
-	// 	background-repeat: no-repeat;
-	// 	background-position: right bottom;
-	// }
+	@include extra-large {
+		min-height: auto;
+	}
+
+	&__container {
+		position: relative;
+		height: 100%;
+		padding-top: 160px;
+		display: flex;
+
+		@include large {
+			flex-direction: column;
+			align-items: center;
+			padding-top: 0;
+			padding-bottom: 40px;
+		}
+	}
 
 	&__content {
-		padding-top: 200px;
 		@include flex-column;
+		padding-top: 90px;
 		color: $whiteTextColor;
-		max-width: 520px;
+		min-width: 520px;
+
+		@include large {
+			padding-top: 101px;
+			align-items: center;
+		}
 	}
 
 	&__title {
@@ -23,6 +38,21 @@
 		font-size: 70px;
 		line-height: 160%;
 		margin-bottom: 20px;
+
+		@include large {
+			margin-bottom: 15px;
+			font-size: 60px;
+			text-align: center;
+		}
+
+		@include medium {
+			font-size: 48px;
+		}
+
+		@include extra-small {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text {
@@ -31,6 +61,20 @@
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 160%;
+
+		@include large {
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		@include medium {
+			width: 86%;
+		}
+
+		@include extra-small {
+			font-size: 16px;
+		}
 	}
 
 	&__link {
@@ -41,5 +85,32 @@
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 160%;
+
+		@include large {
+			position: absolute;
+			z-index: 2;
+			left: 50%;
+			bottom: 40px;
+			transform: translateX(-50%);
+			max-width: none;
+			width: calc(80% - 15px);
+			margin: 0 auto;
+		}
+	}
+
+	&__image {
+		transform: translateX(167px);
+
+		@include huge {
+			transform: translateX(60px);
+		}
+
+		@include extra-large {
+			transform: translateX(20px);
+		}
+
+		@include large {
+			transform: translateX(0px);
+		}
 	}
 }

@@ -1,28 +1,24 @@
+//=============/=============/ BURGER /=============/=============
 
-
-
-const $burger = document.querySelector('.burger'),
-	$nav = document.querySelector('.nav'),
-	$body = document.querySelector('body'),
-	$navItems = document.querySelectorAll('.nav__item'),
-	$navDropdown = document.querySelectorAll('.nav-dropdown');
-	// $siteContainer = document.querySelector('.site-container');
+const $burger = document.querySelector('._burger');
+const $nav = document.querySelector('.nav');
+const $navItems = document.querySelectorAll('.nav__item');
+const $body = document.body;
+// const $header = document.querySelector('.header');
+// const headerHeight = $header.offsetHeight;
+// console.log(headerHeight);
+// document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
 $burger.addEventListener('click', () => {
-
-	$burger.classList.toggle('burger--active');// из иконки меню сделать крестик
-	$nav.classList.toggle('nav--active');// появление меню
-	$body.classList.toggle('stop-scroll');// скрыть прокрутку сайта в
-// 	$siteContainer.classList.toggle('stop-scroll-padding');
+	$body.classList.toggle('_stop-scroll');
+	$burger.classList.toggle('_burger--active');
+	$nav.classList.toggle('nav--active');
 });
 
-
-//закрыьть меню при клике на любой пункт меню
-//удаляем все ранее присвоенные классы для открытия меню
-$navDropdown.forEach(el => {
+$navItems.forEach((el) => {
 	el.addEventListener('click', () => {
-		$burger.classList.remove('burger--active');
-		// $navItems.classList.remove('nav--active');
-		//$body.classList.remove('stop-scroll');
+		$body.classList.remove('_stop-scroll');
+		$burger.classList.remove('_burger--active');
+		$nav.classList.remove('nav--active');
 	})
 });

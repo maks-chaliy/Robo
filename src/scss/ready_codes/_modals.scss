@@ -16,6 +16,7 @@
 		width: 940px;
 		height: 100%;
 		max-height: 768px;
+		padding: 40px;
 		background-color: $whiteColor;
 		transform: translateY(-150px);
 		transition: all 0.5s ease;
@@ -23,15 +24,63 @@
 		border-radius: 20px;
 	}
 
-	&__header,
-	&__body,
-	&__footer {
-		padding: 20px 40px;
+	&__header {
+		@include flex;
+		align-items: start;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		margin-left: 40px;
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 160%;
+		margin-bottom: 10px;
+	}
+
+	&__prof {
+		font-weight: 400;
+		line-height: 160%;
+		margin-bottom: 10px;
+	}
+
+	&-btn--close {
+		margin-left: auto;
 	}
 
 	&__body {
 		flex-grow: 1;
 		overflow: auto;
+	}
+
+	&__tabs_nav {
+		justify-content: space-between;
+		border-bottom: 1px solid rgba(20, 16, 36, 0.11);
+	}
+
+	&__tabs_btn {
+		padding: 20px 0;
+	}
+
+	&__tabs_body {
+		padding: 20px 0;
+	}
+
+	&__tabs_content {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 160%;
+	}
+
+	&__tabs_subtitle {
+		line-height: 160%;
+		font-weight: 600;
+		font-size: 24px;
+		margin-top: 30px;
+		margin-bottom: 20px;
 	}
 
 	&--active {
@@ -49,4 +98,45 @@
 	// 		box-shadow: $blockShadowDark;
 	// 	}
 	// }
+}
+
+//=============/ SOCIAL /=============
+.social {
+	@include flex;
+
+	&__item {
+		width: 30px;
+		height: 30px;
+		background-color: $darkColor;
+		border-radius: 100%;
+		@include flex-all-center;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	&__item i {
+		font-size: 20px;
+		color: var(--white-color);
+	}
+}
+
+//=============/ TABS /=============
+._tabs {
+	&__nav {
+		@include flex-h-center;
+	}
+
+	&__btn--active {
+		color: var(--accent-color);
+	}
+
+	&__content {
+		display: none;
+	}
+
+	&__content--active {
+		display: block;
+	}
 }

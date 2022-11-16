@@ -50,6 +50,11 @@
 	justify-content: center;
 }
 
+@mixin flex-h-end {
+	display: flex;
+	justify-content: flex-end;
+}
+
 @mixin flex-all-center {
 	display: flex;
 	align-items: center;
@@ -105,82 +110,46 @@
 	justify-content: center;
 }
 
-//=============/ ADAPTIVE VALUES /=============
+//=============/ BREAKPOINTS /=============
 
-@mixin large-screen {
+@mixin extra-huge {
 	@media (max-width: (1640px)) {
 		@content;
 	}
 }
 
-@mixin laptop-max {
+@mixin huge {
 	@media (max-width: (1440px)) {
 		@content;
 	}
 }
 
-@mixin min-width-laptop-max {
-	@media (min-width: (1440px)) {
+@mixin extra-large {
+	@media (max-width: (1220px)) {
 		@content;
 	}
 }
 
-@mixin max-width-laptop {
-	@media (max-width: (1200px)) {
+@mixin large {
+	@media (max-width: (1024px)) {
 		@content;
 	}
 }
 
-@mixin min-width-laptop {
-	@media (min-width: (1200px)) {
-		@content;
-	}
-}
-
-@mixin max-width-tablet-max {
-	@media (max-width: (992px)) {
-		@content;
-	}
-}
-
-@mixin min-width-tablet-max {
-	@media (min-width: (992px)) {
-		@content;
-	}
-}
-
-@mixin max-width-tablet {
+@mixin medium {
 	@media (max-width: (768px)) {
 		@content;
 	}
 }
 
-@mixin min-width-tablet {
-	@media (min-width: (768px)) {
-		@content;
-	}
-}
-
-@mixin max-width-mobile {
+@mixin small {
 	@media (max-width: (576px)) {
 		@content;
 	}
 }
 
-@mixin min-width-mobile {
-	@media (min-width: (576px)) {
-		@content;
-	}
-}
-
-@mixin max-width-mobile-min {
+@mixin extra-small {
 	@media (max-width: (425px)) {
-		@content;
-	}
-}
-
-@mixin min-width-mobile-min {
-	@media (min-width: (425px)) {
 		@content;
 	}
 }

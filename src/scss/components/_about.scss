@@ -7,6 +7,16 @@
 		line-height: 160%;
 		max-width: 892px;
 		margin-bottom: 60px;
+
+		@include medium {
+			font-size: 26px;
+			margin-bottom: 50px;
+		}
+
+		@include extra-small {
+			font-size: 20px;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__descr-highlight {
@@ -17,10 +27,23 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 40px;
+
+		@include small {
+			grid-template-columns: repeat(4, 1fr);
+		}
 	}
 
 	&__item{
 		grid-column: 3 span;
+
+		@include extra-large {
+			grid-column: 6 span;
+		}
+
+		@include small {
+			grid-column: 4 span;
+			text-align: center;
+		}
 	}
 
 	&__digit {

@@ -1,0 +1,71 @@
+//=============/ BURGER /=============
+._stop-scroll {
+	overflow: hidden;
+}
+
+._burger {
+	width: 44px;
+	height: 44px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 10px;
+	display: none;
+
+	@include large {
+		display: block;
+	}
+
+	&__inner {
+	position: relative;
+	width: 26px;
+	height: 12px;
+	}
+
+	&__line {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 0.4s ease;
+		width: 100%;
+		height: 2px;
+		background-color: var(--black-color);
+	}
+
+	&__line {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 0.4s ease;
+		width: 100%;
+		height: 2px;
+		background-color: var(--white-color);
+	}
+
+	&__line:nth-child(1) {
+		margin-top: -7px;
+	}
+
+	&__line:nth-child(4) {
+		margin-top: 7px;
+		width: 13px;
+	}
+}
+
+._burger--active {
+	._burger__line:nth-child(1),
+	._burger__line:nth-child(4) {
+		@include hide;
+	}
+
+	._burger__line:nth-child(2) {
+		transform: rotate(45deg);
+	}
+	._burger__line:nth-child(3) {
+		transform: rotate(-45deg);
+	}
+}
+
+._stop-scroll {
+	overflow: hidden;
+}

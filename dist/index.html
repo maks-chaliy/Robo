@@ -31,7 +31,20 @@
 				<li class="nav__item"><a href="#tariffs" class="nav__link" data-scroll_by_click=".tariffs">Стоимость</a></li>
 			</ul>
 		</nav>
-		<a href="tel:+78000001122" class="header__phone">+7 800 000 11 22</a>
+		<a href="tel:+78000001122" class="phone phone__mobile">+7 800 000 11 22</a>
+		<a href="tel:+78000001122" class="phone__image">
+			<svg>
+				<use xlink:href="img/svg/sprite.svg#call"></use>
+			</svg>
+		</a>
+		<button class="_btn-reset _burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+			<span class="_burger__inner">
+				<span class="_burger__line"></span>
+				<span class="_burger__line"></span>
+				<span class="_burger__line"></span>
+				<span class="_burger__line"></span>
+			</span>
+		</button>
 	</div>
 </header>
 		<main class="main">
@@ -42,9 +55,15 @@
 			<span class="hero__text">Курсы повышения квалификации по робототехнике для педагогов начальной школы</span>
 			<a href="#" class="hero__link _main-btn">Записаться на курс</a>
 		</div>
+		<div class="hero__image">
+			<picture>
+				<source srcset="img/hero-image.webp" type="image/webp">
+				<img loading="lazy" src="img/hero-image.png" width="783" height="918" alt="Девушка с документами">
+			</picture>
+		</div>
 	</div>
 </section>
-			<section class="_section about" id="'about">
+			<section class="_section-offset about" id="'about">
 	<div class="_container about__container">
 		<h2 class="_visually-hidden">Секция о школе Robo.Sholl</h2>
 		<p class="about__descr">
@@ -70,7 +89,7 @@
 		</ul>
 	</div>
 </section>
-			<section class="_section benefits">
+			<section class="_section-offset benefits">
 	<div class="_container benefits__container">
 		<h2 class="_section-title benefits__title">Что вы получите после курса</h2>
 		<ul class="_list-reset benefits__list">
@@ -93,13 +112,12 @@
 						<span class="_tooltip__text">При наличии свободных мест</span>
 					</span>
 				</p>
-				<p class="benefits__descr">Возможность пройти практику по преподаванию робототехники на базе R:ED LAB (в оффлайн
-					или онлайн формате)</p>
+				<p class="benefits__descr">Возможность пройти практику по&nbsp;преподаванию робототехники на&nbsp;базе R:ED LAB (в&nbsp;оффлайн или онлайн формате)</p>
 			</li>
 		</ul>
 	</div>
 </section>
-			<section class="_section trainers">
+			<section class="_section-offset trainers">
 	<div class="_container trainers__container">
 		<h2 class="_section-title">Профессиональные тренеры</h2>
 	</div>
@@ -190,12 +208,12 @@
 		</div>
 	</div>
 </section>
-			<section class="_section tariffs" id="tariffs">
+			<section class="_section-offset tariffs" id="tariffs">
 	<div class="_container tariffs__container">
 		<h2 class="_section-title">Выберите нужный пакет</h2>
 		<div class="tariffs__items">
 
-			<div class="tariffs__item tariffs__item--current">
+			<div class="tariffs__item">
 				<h3 class="tariffs__subtitle">PRO</h3>
 				<span class="tariffs__price">20.000 ₽</span>
 				<p class="tariffs__descr">УМК по робототетхнике и программированию</p>
@@ -219,11 +237,41 @@
 		</div>
 	</div>
 </section>
+			<section class="_section-offset__top order">
+	<div class="order__inner">
+		<div class="_container order__container">
+			<div class="order__left">
+				<h3 class="order__subtitle">Запишитесь на курс со скидкой 10%</h3>
+				<p class="order__descr">Акция действительна до 10 марта 2022 года</p>
+			</div>
+			<div class="order__right">
+				<form action="#" class="order__form">
+					<label class="order__label">
+						<input type="text" name="Имя" class="_input-reset order__input" placeholder="Имя">
+					</label>
+					<label class="order__label">
+						<input type="tel" name="Телефон" class="_input-reset order__input" placeholder="Телефон">
+					</label>
+					<label class="order__label">
+						<input type="email" name="E-mail" class="_input-reset order__input" placeholder="E-mail">
+					</label>
+					<button class="_btn-reset _main-btn order__btn">Отправить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
 		</main>
 		<footer class="footer">
-	<div class="footer__inner">
-		footer
+<div class="_container__wide footer__container">
+	<div class="footer__left">
+		<a href="#" class="logo">Robo.Scholl</a>
+		<span class="footer__copy">© ROBO.SCHOOL</span>
 	</div>
+	<div class="footer__right">
+		<a href="tel:+78000001122" class="phone  footer__phone">+7 800 000 11 22</a>
+	</div>
+</div>
 </footer>
 	</div>
 	<div class="modal" id="modal-1">
@@ -248,12 +296,60 @@
 		<div class="modal__header">
 			<picture>
 				<source srcset="img/trainers/trainer-2.webp" type="image/webp">
-				<img loading="lazy" src="img/trainers/trainer-2.jpg" class="image" width="160" height="222" alt="Ирина Лайм">
+				<img loading="lazy" src="img/trainers/trainer-2.jpg" class="image" width="160" height="222" alt="Марина Орлова">
 			</picture>
+			<div class="modal__text">
+				<div class="modal__name">Марина Орлова</div>
+				<div class="modal__prof">преподаватель по робототехнике</div>
+				<ul class="_list-reset social">
+					<li class="social__item"><a href="#" target="blank" class="social__link"><i class='bx bxl-facebook'></i></a></li>
+					<li class="social__item"><a href="#" target="blank" class="social__link"><i class='bx bxl-instagram'></i></a></li>
+				</ul>
+			</div>
 			<button class="_btn-reset modal-btn--close"
 				aria-label="Закрыть модальное окно"><span>Закрыть</span></button>
 		</div>
-		<div class="modal__body"></div>
+		<div class="modal__body">
+			<div class="_tabs modal__tabs">
+				<div class=" _tabs__nav modal__tabs_nav">
+					<button class="_btn-reset _tabs__btn modal__tabs_btn" data-tab="#tab_1">Образование</button>
+					<button class="_btn-reset _tabs__btn modal__tabs_btn" data-tab="#tab_2">Опыт работы</button>
+					<button class="_btn-reset _tabs__btn modal__tabs_btn" data-tab="#tab_3">Награды</button>
+				</div>
+				<div class="_tabs__body modal__tabs_body">
+					<div class="_tabs__content" id="tab_1">
+						<p class="modal__tabs_content">Сентябрь 1995 — Июнь 2000</p>
+						<p class="modal__tabs_content">Санкт-Петербургский политехнический университет Петра Великого</p>
+						<p class="modal__tabs_content">Факультет: Компьютерных наук и технологий</p>
+						<p class="modal__tabs_content">Специальность: Математика и компьютерные науки</p>
+						<p class="modal__tabs_content">Форма обучения: Очная</p>
+						<h3 class="modal__tabs_subtitle">Курсы и тренинги</h3>
+						<p class="modal__tabs_content">Ноябрь 2020 — Февраль 2021я</p>
+						<p class="modal__tabs_content">Программа дополнительного образования «3D Моделирование»</p>
+						<p class="modal__tabs_content">Место проведения: Институт дополнительного образования «Политех»</p>
+					</div>
+					<div class="_tabs__content" id="tab_2">
+						<p class="modal__tabs-content">Сентябрь 1995 — Июнь 2000</p>
+						<p class="modal__tabs-content">Санкт-Петербургский политехнический университет Петра Великого</p>
+						<p class="modal__tabs_content">Факультет: Компьютерных наук и технологий</p>
+						<p class="modal__tabs_content">Специальность: Математика и компьютерные науки</p>
+						<p class="modal__tabs_content">Форма обучения: Очная</p>
+					</div>
+					<div class="_tabs__content" id="tab_3">
+						<p class="modal__tabs_content">Сентябрь 1995 — Июнь 2000</p>
+						<p class="modal__tabs_content">Санкт-Петербургский политехнический университет Петра Великого</p>
+						<p class="modal__tabs_content">Факультет: Компьютерных наук и технологий</p>
+						<p class="modal__tabs_content">Специальность: Математика и компьютерные науки</p>
+						<p class="modal__tabs_content">Форма обучения: Очная</p>
+						<p class="modal__tabs_content">Сентябрь 1995 — Июнь 2000</p>
+						<p class="modal__tabs_content">Санкт-Петербургский политехнический университет Петра Великого</p>
+						<p class="modal__tabs_content">Факультет: Компьютерных наук и технологий</p>
+						<p class="modal__tabs_content">Специальность: Математика и компьютерные науки</p>
+						<p class="modal__tabs_content">Форма обучения: Очная</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="modal__footer">
 			<button class="_btn-reset modal-btn--close" aria-label="Закрыть модальное окно">Закрыть</button>
 		</div>

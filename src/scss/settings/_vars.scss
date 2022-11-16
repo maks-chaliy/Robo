@@ -1,6 +1,5 @@
 
-//=============/=============/=============
-
+//=============/ MAIN /=============
 $maxWidth: 1920;
 $contentWidth: 1160px;
 $maxWidthContainer: 1190;
@@ -35,65 +34,18 @@ $offsetSmallBack: -20px;
 $offsetMinimum: 10px;
 $offsetMinimumBack: -10px;
 
-//=============/=============/=============
 
 :root {
-	//=============/=============/=============
-	//========== OFFSET ==========
-	//отступ максимальный
-	--offset-maximum: 100px;
-	//отступ огромный
-	--offset-huge: 60px;
-	//отступ большой
-	--offset-large: 40px;
-	//отступ средний
-	--offset-middle: 30px;
-	//отступ маленький
-	--offset-small: 20px;
-	//отступ маленький в обратную сторону
-	--offset-small-back: -20px;
-	//отступ минимальный в обратную сторону
-	--offset-minimum: 10px;
-	--offset-minimum-back: -10px;
-	//отступ минимальный
-
-	//=============/=============/=============
-	--block-radius: 5px;
-	--block-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
-
-	//=============/=============/=============
-	//========== COLORS ==========
-
-	--dark-color: #222629;
-	--dark-text-color: #222629;
-	--light-text-color: #c6ccd2;
-	--light-color: #c6ccd2;
-	--nevada-color: #6b6e70;
-	--abbey-color: #474b4f;
-	--atlantis-color: #86c232;
-	--crete-color: #61892f;
-	--creamCan-color: #f4cb67;
-	--straw-color: #cebc81;
-
-	--white-text--color: #fff;
+  /* colors */
+  --black-color: #000;
 	--black-text-color: #000;
 	--white-color: #fff;
-	--black-color: #000;
-	--text-gray-color: #676568;
-	--text-dargGray-color: #181818;
-	--spectra-color01: #dadfdf;
-	--spectra-color02: #b5c1c0;
-	--spectra-color03: #92a3a2;
-	--spectra-color04: #4f6a6a;
-	--spectra-color05: #2f4f4f;
-	--spectra-color06: #294242;
-	--spectra-color07: #1c2a29;
-	--bgImage-color: #505050;
-
-	--westSide-color: #ff9218;
-	--blue-color: #1f9cff;
-	--outerSpace-color: #2f363e;
-	--xanadu-color: #7d7f7d;
-	--orange-color: #b3821a;
-	--pumpkin-color: #d9821a;
+	--white-yext-color: #fff;
+	--dark-color: #222629;
+	--dark-text-color: #222629;
+	--light-color: #d6dfea;
+	--light-text-color: #d6dfea;
+	// --light-twxt-color: #c6ccd2;
+	--gray-color: #676568;
+	--accent-color: #d52027;
 }

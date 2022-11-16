@@ -12,13 +12,10 @@
 
 	&__container {
 		@include flex-center-sb;
-	}
 
-	&__phone {
-		font-weight: 600;
-		font-size: 30px;
-		line-height: 160%;
-		color: $whiteTextColor;
+		@include large {
+			justify-content: initial;
+		}
 	}
 }
 
@@ -28,17 +25,48 @@
 	font-size: 30px;
 	line-height: 160%;
 	color: $whiteTextColor;
+
+	@include medium {
+		font-size: 24px;
+	}
+
+	@include extra-small {
+		font-size: 18px;
+	}
 }
 
 //=============/ NAV /=============
 .nav {
+	--header-height: 70px;
+
+	@include large {
+		position: fixed;
+		right: -100%;
+		top: var(--header-height);
+		width: 100vw;
+		height: 100vh;
+		background-color: #141024;
+		transition: right 0.4s ease;
+	}
+
 	&__list {
 		@include flex-h-center;
+
+		@include large {
+			height: 100%;
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 
 	&__item {
 		&:not(:last-child) {
 			margin-right: 30px;
+
+			@include large {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
 		}
 	}
 
@@ -46,5 +74,48 @@
 		font-size: 20px;
 		line-height: 160%;
 		color: $whiteTextColor;
+
+		@include large {
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 160%;
+		}
+	}
+}
+
+.nav--active {
+	right: 0;
+}
+
+//=============/ PHONE /=============
+.phone {
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 160%;
+	color: $whiteTextColor;
+	// background-image: url('../../img/svg/call.svg');
+
+	@include large {
+		display: none;
+	}
+
+	&__image {
+		border: 1px solid rgba(255, 255, 255, 0.28);
+		border-radius: 10px;
+		width: 44px;
+		height: 44px;
+		@include flex-all-center;
+		display: none;
+
+		@include large {
+			display: flex;
+			margin-left: auto;
+			margin-right: 10px;
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
 	}
 }
